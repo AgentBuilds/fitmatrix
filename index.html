@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="hsl(155 32% 27%)" />
+    <meta name="description" content="Plan local language model memory budgets with clearly labeled estimates and separate measured results." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <title>FitMatrix — Local model planning</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace">Skip to workspace</a>
+    <header class="site-header">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">F<span>m</span></span>FitMatrix</div>
+      <nav aria-label="Main navigation"><a href="#workspace">Workspace</a><a href="#scope">MVP scope</a></nav>
+      <span class="version">v0.1 / foundation</span>
+    </header>
+    <main id="workspace" tabindex="-1">
+      <div class="intro">
+        <p class="eyebrow">LOCAL INFERENCE / HARDWARE PLANNING</p>
+        <h1>A place for your<br />next local model.</h1>
+        <p class="intro-copy">Understand the memory budget before you run. Explore model estimates, then keep real measurements alongside them.</p>
+      </div>
+      <div class="workspace-grid">
+        <section class="panel model-panel" aria-labelledby="model-heading">
+          <div class="panel-heading"><h2 id="model-heading">Model workspace</h2><span class="badge">Llama architecture</span></div>
+          <div class="model-empty">
+            <svg class="model-icon" viewBox="0 0 80 80" fill="none" aria-hidden="true"><rect x="18" y="18" width="44" height="44" rx="8" stroke="currentColor" stroke-width="2"/><path d="M28 30h24M28 40h16M28 50h24M30 10v8m10-8v8m10-8v8M30 62v8m10-8v8m10-8v8M10 30h8m-8 10h8m-8 10h8M62 30h8m-8 10h8m-8 10h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <p class="eyebrow">NO MODEL LOADED</p>
+            <h3>Your workspace starts here</h3>
+            <p>GGUF metadata import is coming next. Once a model is loaded, this space will show its architecture and memory inputs.</p>
+            <span class="roadmap-label">Planned · GGUF metadata import</span>
+          </div>
+          <div class="panel-note"><span class="note-marker" aria-hidden="true"></span><p>Estimates will be labeled explicitly. No measured results are available yet.</p></div>
+        </section>
+        <aside class="sidebar">
+          <section class="panel scope-panel" id="scope" aria-labelledby="scope-heading">
+            <p class="eyebrow">A FOCUSED FIRST RELEASE</p><h2 id="scope-heading">The planning path</h2>
+            <ol class="steps">
+              <li><span class="step-number">01</span><div><h3>Bring a model</h3><p>Read GGUF metadata for Llama.</p></div></li>
+              <li><span class="step-number">02</span><div><h3>Set your budget</h3><p>Enter available RAM and VRAM.</p></div></li>
+              <li><span class="step-number">03</span><div><h3>Explore the tradeoffs</h3><p>Quantization, context, and CPU offloading.</p></div></li>
+            </ol>
+            <p class="scope-note">These planning features are upcoming. This release establishes the application foundation.</p>
+          </section>
+          <section class="api-panel" aria-labelledby="api-heading">
+            <div><p class="eyebrow">APPLICATION STATUS</p><h2 id="api-heading">API connection</h2></div>
+            <p id="api-status" class="api-status" role="status" aria-live="polite">Checking the local API…</p>
+            <button id="check-api" type="button" disabled aria-busy="true">Checking…</button>
+            <noscript><p>Enable JavaScript to check the connection, or visit <a href="/api/health">the health endpoint</a> directly.</p></noscript>
+          </section>
+        </aside>
+        <section class="panel comparison-panel" aria-labelledby="comparison-heading">
+          <div><p class="eyebrow">SAVED COMPARISONS</p><h2 id="comparison-heading">A record of your decisions</h2></div>
+          <p>No comparisons yet. Saving configurations and recording local measurements will be added in a later task.</p>
+          <span class="badge">Planned</span>
+        </section>
+      </div>
+      <footer><span>FitMatrix / local model planning</span><span>Estimates and measurements, kept separate.</span></footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
