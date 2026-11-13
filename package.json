@@ -1,10 +1,12 @@
 {
   "name": "fitmatrix",
-  "version": "0.1.0",
+  "version": "0.1.0-canary.1794578268298",
   "private": true,
   "type": "module",
   "description": "A local language model hardware planning workspace",
-  "engines": { "node": ">=22.12.0" },
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "node --watch server/index.js --dev",
     "build": "node scripts/build.js",
